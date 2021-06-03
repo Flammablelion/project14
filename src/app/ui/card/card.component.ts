@@ -30,6 +30,7 @@ export class CardComponent implements OnInit {
    this.editIndex = this.card[index].id;
 
   }
+  
   onSetEdit(){
     let note: MyCards = {
       id: this.editIndex,
