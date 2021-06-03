@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="col-12">
+        <div class="jumbotron">
+            <h1 class="display-3">Заметки</h1>
+            <p class="lead">Это форма для создания заметки, запишите имя заметки и её содержание и нажмите кнопку
+                "Добавить заметку", для очистки формы используйте соответствующую кнопку</p>
+            <hr class="my-2">
+            <input 
+            type="text" class="form-control mb-2" placeholder="Название" aria-label=""
+            aria-describedby="basic-addon1" 
+            [(ngModel)]="inputName" 
+            >
+             <textarea class="col"  [(ngModel)]="text"></textarea>
+            <p class="lead">
+                <a 
+                name="Текст заметки" 
+                class="btn btn-primary btn-lg" 
+                role="button"
+                (click) = "onAddNote()"
+                >Добавить заметку</a>
+                <a name="Текст заметки" class="btn btn-primary btn-lg" role="button"
+                    style="margin-left: 20px; " (click) = "getClear()">Очистить форму</a>
+            </p>
+        </div>
+    </div>
+</div>

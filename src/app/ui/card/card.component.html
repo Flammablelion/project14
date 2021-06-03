@@ -1,0 +1,31 @@
+<div class="container" *ngIf="editActive">
+    <input type="text" class="form-control ml-3 mb-2" placeholder="Название" aria-label=""
+        aria-describedby="basic-addon1" [(ngModel)]="editName" [value]="editName">
+    <div class="col-12">
+        <textarea cols="142" rows="4" [(ngModel)]="editText">{{editText}}</textarea>
+        <a href="#" class="btn btn-primary ml-2" (click)="onSetEdit()">Сохранить изменения</a>
+    </div>
+</div>
+
+
+<div class="container mt-3">
+    <div class="row">
+    <!-- <div class="col-sm"> -->
+
+        <div class="col-lg-4 col-md-6 col-sm-6 card mt-3 " *ngFor="let item of card;let i = index">
+            <div class="card-body">
+                <h4 class="card-title">{{item.name}} <a style="font-size: 15px;"> {{item.date}} </a> </h4>
+
+                <p class="card-text">
+                    {{item.inputText}}
+                </p>
+
+                <button type="button" class="btn btn-danger" (click)="onDeleteCard(i)">Удалить заметку</button>
+
+                <a class="btn btn-primary ml-2" (click)="getEdit(i)">Редактировать</a>
+
+            </div>
+        <!-- </div> -->
+       </div>
+    </div>
+</div>
