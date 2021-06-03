@@ -40,7 +40,6 @@ export class AppComponent implements OnInit{
       console.error(err);
     }
     this.getData();
-    console.log(this.card[index].id);
   }
 
   async onSetEdit(note: MyCards){
