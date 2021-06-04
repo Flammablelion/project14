@@ -3,6 +3,7 @@ export interface MyCards{
     id?: number;
     name: string;
     inputText:string;
-    date:string;
+    date?:string;
+    reDate?:string;
 
 }
