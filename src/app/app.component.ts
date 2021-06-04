@@ -17,12 +17,7 @@ export class AppComponent implements OnInit{
   card: MyCards[] = [];
 
 
-  async onAddNote(note: MyCards){
-    let id =
-    this.card.length > 0
-    ? this.card[this.card.length - 1].id +1 : 0;
-
-    
+  async onAddNote(note: MyCards){    
     try{
       await this.noteHTTPDbService.postNotes(note);
       
