@@ -36,7 +36,7 @@ export class CardComponent implements OnInit {
       id: this.editIndex,
       name: this.editName,
       inputText: this.editText,
-      date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()
+      reDate: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() + " ред.."
     }
     this.setEdit.emit(note);
     this.editActive = false;
